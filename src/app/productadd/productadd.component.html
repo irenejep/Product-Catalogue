@@ -1,0 +1,19 @@
+<div class="container">
+  <form routerLink="categories" method="POST" style="margin-top:5%" name="addProductForm">
+    <div class="form-group">
+      <label for="name">Category</label>
+      <select class="form-control form-control-sm">
+        <option>---select category---</option>
+        <option *ngFor="let product of products$" name="category_name" value="{{ product.category_name }}">{{ product.category_name
+          }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="name">Product name</label>
+      <input type="text" class="form-control" id="name" name="product_name" placeholder="Enter name of product">
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </form>
+</div>
